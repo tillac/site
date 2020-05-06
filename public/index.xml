@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tillac</title>
+    <link>/</link>
+    <description>Recent content on tillac</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>H2 header Lorem Ipsum as their default model text, and a search for &amp;lsquo;lorem ipsum&amp;rsquo; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+h22 header h3 hedaer Ceci est un test de lien. ndustry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/post/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

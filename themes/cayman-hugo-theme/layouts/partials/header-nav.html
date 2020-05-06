@@ -1,0 +1,22 @@
+<section class="page-header">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</section>
+
+<section class="page-nav">
+  <nav>
+    {{ $current := . }}
+    {{ range .Site.Menus.nav }}
+      {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+      {{ $active = or $active (eq .Name $current.Title) }}
+      {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+      {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+      <a href="{{ .URL }}" class="btn">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+</section>
