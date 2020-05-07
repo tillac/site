@@ -6,47 +6,48 @@
     <description>Recent content on tillac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>[EN] Thomas is a data analyst. After a master degree in Statistics and Social Sciences and some works in reasearch and public statistics, about social workers, employment and skills, he founded tillac in 2020.
+He likes datas, how to use them and enhance them. He also loves good design, because it also helps to understand things, running and badminton. Have a look at his website.
+[FR] Thomas est statisticien. Il a été formé aux statistiques ainsi qu&amp;rsquo;aux sciences sociales (ENS-EHESS).</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
       <link>/post/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/post/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>About aaa</title>
-      <link>/about/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>H2 header Lorem Ipsum as their default model text, and a search for &amp;lsquo;lorem ipsum&amp;rsquo; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-some inline code
-h22 header with thematic aaa h3 hedaer chunk code akdjbef efeg    Tables Are Cool     col 1 is left-aligned $1600   col 2 is centered $12   col 3 is right-aligned $1    Ceci est un test de lien.</description>
-    </item>
-    
-    <item>
       <title>Contact</title>
       <link>/contact/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
       <description>[EN] Anything we can do for you ? Contact us so we can discuss about it : contact@tillac-data.com[FR] Pouvons-nous faire quelque chose pour vous ? Contactez nous pour en parler : contact@tillac-data.</description>
     </item>
     
     <item>
-      <title>What we can do for you</title>
+      <title>What we do</title>
       <link>/what/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/what/</guid>
-      <description></description>
+      <description>[EN] At tillac, we believe that data must be seen in its context :
+ what type of organization are you ? do you need analytics to have weekly insights about your activity ? or in-deep knolewdge of how your processes really works ? you want to use data to communicate to stackholders ?  We help you with all this steps.
+Data strategy You feel that your use of your datas is not optimal ?</description>
     </item>
     
   </channel>

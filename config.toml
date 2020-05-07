@@ -67,12 +67,12 @@ pygmentsStyle = "pygments"
   [[params.social]]
   name = "Twitter"
   icon = "twitter"
-  url = "https://twitter.com/tvroylandt"
+  url = "https://twitter.com/tillac_data"
 
   [[params.social]]
   name = "Github"
   icon = "github"
-  url = "https://github.com/tvroylandt"
+  url = "https://github.com/tillac"
   
   [[params.social]]
   name = "Linkedin"

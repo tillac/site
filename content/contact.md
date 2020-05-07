@@ -1,5 +1,4 @@
 ---
-date: "2019-03-29"
 title: Contact
 top_image: '/img/girafes.jpg'
 ---
