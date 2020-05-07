@@ -237,7 +237,7 @@ a {
 
 /* footer */
 .site-footer {
-  background-color: #f3f6fa; }
+  background-color: #606c71; }
   @media screen and (min-width: 64em) {
     .site-footer {
       font-size: 1rem; } }
@@ -249,23 +249,6 @@ a {
       font-size: 0.9rem; } }
 /* crédits - sur la gauche */
 .site-footer-credits {
-  display: inline-block;
-  width: 30%; }
+  color: #741336; }
 
-/* contact - sur la droite */
-.site-footer-contact {
-  display: inline-block;
-  width: 50%;
-  text-align: right; }
-
-/* social media - sur la droite */
-ul.flat {
-  margin: 0; }
-
-ul.flat a {
-  display: block;
-  border-bottom: none;
-  margin: 15px; }
-
-.nav-social {
-  display: inline-block; }
+/* social media + contact - sur la droite */

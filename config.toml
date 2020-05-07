@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "http://127.0.0.1:4321/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "tillac"
@@ -26,7 +26,14 @@ pygmentsStyle = "pygments"
   dateFormat = "2006-01-02"
 
   # Footer text, can be markdown
-  footer = "Blablabla"
+  footer_credits1 = "Photos : Copyright J. Vroylandt"
+  footer_credits2 = "Theme : inspired by Cayman-Hugo-Theme"
+
+  footer_contact1 = "tillac" 
+  footer_contact2 = "9 quai de la Canardière" 
+  footer_contact3 = "60500 CHANTILLY" 
+  footer_contact4 = "FRANCE" 
+  footer_contact5 = "<a href='mailto:contact@tillac-data.com'>contact@tillac-data.com</a>" 
 
   # If true, the CSS/JS for Katex math typesetting are enabled
   katex = true
@@ -53,6 +60,24 @@ pygmentsStyle = "pygments"
   border_color = "#dce6f0"
   table_border_color = "#e9ebec"
   hr_border_color = "#eff0f1"
+  
+  # social
+  socialize = true
+  
+  [[params.social]]
+  name = "Twitter"
+  icon = "twitter"
+  url = "https://twitter.com/tvroylandt"
+
+  [[params.social]]
+  name = "Github"
+  icon = "github"
+  url = "https://github.com/tvroylandt"
+  
+  [[params.social]]
+  name = "Linkedin"
+  icon = "linkedin"
+  url = "https://fr.linkedin.com/in/thomas-vroylandt-9a2334190"
 
 [menu]
   [[menu.nav]]
@@ -75,3 +100,6 @@ pygmentsStyle = "pygments"
     name = "contact"
     url = "/contact/"
     weight = 5
+
+
+

@@ -291,11 +291,13 @@ h4 {
     }
   }
 
+/* liste */
   ul,
   ol {
     margin-top: 0;
   }
 
+/* blockquote */
   blockquote {
     padding: 0 1rem;
     margin-left: 0;
@@ -311,6 +313,7 @@ h4 {
     }
   }
 
+/* tableau */
   table {
     display: block;
     width: 100%;
@@ -330,6 +333,7 @@ h4 {
     }
   }
 
+/* liste de description */
   dl {
     padding: 0;
 
@@ -346,19 +350,19 @@ h4 {
     }
   }
 
+/* barre horizontale */
   hr {
-    height: 2px;
+    height: 4px;
     padding: 0;
     margin: 1rem 0;
-    background-color: $hr-border-color;
+    background-color: $header-bg-color;
     border: 0;
   }
 }
 
+/* footer */
 .site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px $hr-border-color;
+  background-color: $code-bg-color;
 
   @include large {
     font-size: 1rem;
@@ -373,11 +377,32 @@ h4 {
   }
 }
 
-.site-footer-owner {
-  display: block;
-  font-weight: bold;
+/* crédits - sur la gauche */
+.site-footer-credits {
+  display: inline-block;
+  width: 30%;
 }
 
-.site-footer-credits {
-  color: $blockquote-text-color;
+/* contact - sur la droite */
+.site-footer-contact {
+	display: inline-block;
+	width: 50%;
+    text-align: right;
 }
+
+/* social media - sur la droite */
+ul.flat {
+    margin: 0;
+}
+
+ul.flat a {
+	display: block;
+	border-bottom: none;
+	margin: 15px;
+}
+
+.nav-social{
+	display: inline-block;	
+}
+
+

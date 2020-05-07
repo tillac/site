@@ -249,23 +249,20 @@ a {
       font-size: 0.9rem; } }
 /* crédits - sur la gauche */
 .site-footer-credits {
-  display: inline-block;
-  width: 30%; }
+  color: #741336;
+  display: inline-block; }
 
 /* contact - sur la droite */
 .site-footer-contact {
-  display: inline-block;
-  width: 50%;
-  text-align: right; }
+  display: inline-block; }
 
 /* social media - sur la droite */
 ul.flat {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 ul.flat a {
-  display: block;
-  border-bottom: none;
-  margin: 15px; }
+  display: block; }
 
 .nav-social {
   display: inline-block; }

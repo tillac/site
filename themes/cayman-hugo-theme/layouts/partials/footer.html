@@ -1,5 +1,27 @@
 <footer class="site-footer">
   <span class="site-footer-credits">
-    {{ $.Site.Params.footer | markdownify }}
+    {{ $.Site.Params.footer_credits1 | markdownify }} <br>
+    {{ $.Site.Params.footer_credits2 | markdownify }} <br>
   </span>
+
+   <span class="site-footer-contact">
+    {{ $.Site.Params.footer_contact1 | markdownify }} <br>
+    {{ $.Site.Params.footer_contact2 | markdownify }} <br>
+    {{ $.Site.Params.footer_contact3 | markdownify }} <br>
+    {{ $.Site.Params.footer_contact4 | markdownify }} <br>
+    {{ $.Site.Params.footer_contact5 | markdownify }} <br>
+  </span>
+
+	<nav class="nav-social">
+		<ul class="flat">
+			{{- range $index, $key := .Site.Params.Social -}}
+			<a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
+			{{- end -}}
+		</ul>
+	</nav>
+
 </footer>
+
+{{- with .Site.Params.Social -}}
+<script>feather.replace()</script>
+{{- end -}}

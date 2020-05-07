@@ -249,23 +249,25 @@ a {
       font-size: 0.9rem; } }
 /* crédits - sur la gauche */
 .site-footer-credits {
-  display: inline-block;
-  width: 30%; }
+  color: #741336; }
 
-/* contact - sur la droite */
-.site-footer-contact {
-  display: inline-block;
-  width: 50%;
-  text-align: right; }
-
-/* social media - sur la droite */
+/* social media + contact - sur la droite */
 ul.flat {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
-ul.flat a {
-  display: block;
-  border-bottom: none;
-  margin: 15px; }
+ul.flat li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 0; }
 
-.nav-social {
-  display: inline-block; }
+.site-footer nav ul.flat {
+  padding: 0; }
+
+.site-footer nav ul.flat li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-transform: capitalize; }

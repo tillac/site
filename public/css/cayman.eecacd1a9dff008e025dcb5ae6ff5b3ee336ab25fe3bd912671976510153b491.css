@@ -250,13 +250,11 @@ a {
 /* crédits - sur la gauche */
 .site-footer-credits {
   display: inline-block;
-  width: 30%; }
+  size: 12px; }
 
 /* contact - sur la droite */
 .site-footer-contact {
-  display: inline-block;
-  width: 50%;
-  text-align: right; }
+  display: inline-block; }
 
 /* social media - sur la droite */
 ul.flat {
@@ -264,8 +262,7 @@ ul.flat {
 
 ul.flat a {
   display: block;
-  border-bottom: none;
-  margin: 15px; }
+  border-bottom: none; }
 
 .nav-social {
   display: inline-block; }
