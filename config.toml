@@ -90,15 +90,15 @@ pygmentsStyle = "pygments"
     weight = 2
   [[menu.nav]]
     name = "what we do"
-    url = "/what/"
+    url = "/what"
     weight = 3
   [[menu.nav]]
     name = "about"
-    url = "/about/"
+    url = "/about"
     weight = 4
   [[menu.nav]]
     name = "contact"
-    url = "/contact/"
+    url = "/contact"
     weight = 5
 
 
