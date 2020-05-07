@@ -1,0 +1,3 @@
+[submodule "static/post/external/fast_rmd_theming"]
+	path = static/post/external/fast_rmd_theming
+	url = https://github.com/tillac/fast_rmd_theming
