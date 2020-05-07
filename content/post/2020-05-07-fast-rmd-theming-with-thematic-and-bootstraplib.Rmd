@@ -1,0 +1,12 @@
+---
+title: fast-rmd-theming-with-thematic-and-bootstraplib
+author: Thomas
+date: '2020-05-07'
+slug: fast-rmd-theming-with-thematic-and-bootstraplib
+categories: []
+tags: []
+---
+
+```{r child='fast_rmd_theming/fast_rmd_theming_blog.Rmd'}
+
+```

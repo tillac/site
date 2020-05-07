@@ -14,6 +14,8 @@ disqusShortname = "XXX"
 pygmentsCodefences = true
 pygmentsStyle = "pygments"
 
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
 [taxonomies]
   tag = "tags"
 
