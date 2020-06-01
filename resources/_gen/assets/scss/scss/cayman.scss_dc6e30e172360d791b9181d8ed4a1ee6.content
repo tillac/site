@@ -200,6 +200,8 @@ a {
   .main-content ul,
   .main-content ol {
     margin-top: 0; }
+  .main-content li {
+    margin-bottom: 5px; }
   .main-content blockquote {
     padding: 0 1rem;
     margin-left: 0;
