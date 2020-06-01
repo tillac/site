@@ -1,3 +1,9 @@
 [submodule "static/post/external/fast_rmd_theming"]
 	path = static/post/external/fast_rmd_theming
 	url = https://github.com/tillac/fast_rmd_theming
+[submodule "static/post/external/legion_honneur"]
+	path = static/post/external/legion_honneur
+	url = https://github.com/tillac/legion_honneur
+[submodule "static/post/external/vendanges"]
+	path = static/post/external/vendanges
+	url = https://github.com/tillac/vendanges
