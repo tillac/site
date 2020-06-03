@@ -2,7 +2,6 @@ baseURL = "https://www.tillac-data.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "tillac"
-theme = "cayman-hugo-theme"
 
 # Google analytics
 googleAnalytics = "UA-154610501-2"
