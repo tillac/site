@@ -125,11 +125,11 @@ a {
     line-height: 2; }
   .main-content h1 {
     font-size: 2.5em; }
-  .main-content h1,
-  .main-content h2 {
+  .main-content h1 {
     background-color: #741336;
     color: #ffffff;
     border-bottom: none; }
+  .main-content h2,
   .main-content h3 {
     color: #606c71;
     border-bottom: solid #741336 4px;

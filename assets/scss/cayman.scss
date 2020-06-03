@@ -195,13 +195,13 @@ h1 {
 	font-size: 2.5em;
 }
 
-h1,
-h2 {
+h1 {
 	background-color: $header-bg-color;
 	color : #ffffff;
 	border-bottom: none;
 }
 
+h2,
 h3 {
   color: $body-text-color;
   border-bottom: solid $header-bg-color 4px;

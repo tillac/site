@@ -38,6 +38,7 @@ Dans le cas où le post est déjà rédigé à l'extérieur dans un répertoire 
 
   + On se positionne dans le bon dossier avec `cd static/post/external` ;
   + Puis on fait `git submodule add url_du_rep_git`;
+  + On s'assure d'avoir supprimer si possible le header du Rmd original (pour être propre).
 
 + On pointe le child du premier chunk (vide) vers `../../static/post/external/chemin_du_Rmd` ;
 + On ajoute l'image.
@@ -46,8 +47,11 @@ Certains chemins internes peuvent causer des problèmes. Il faut alors les régl
 
 Pour mettre à jour le dossier externe : 
 
++ se mettre au bon endroit avec `cd` ;
 + `git fetch` ;
 + `git merge origin/master`.
+
+Ou `git submodule update --remote` pour les mettre tous à jour.
 
 L'inspiration de cette démarche est ici : https://timmastny.rbind.io/blog/git-blogdown-projects-workflow/.
 

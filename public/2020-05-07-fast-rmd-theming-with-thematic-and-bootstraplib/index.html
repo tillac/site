@@ -10,7 +10,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/cayman.887df1a72420e56fccb2279905a2950011c56f08d192df0bd7f32a8e9a357dbf.css">
+  <link rel="stylesheet" href="/css/cayman.d23308c4a5c01c72a110438ddd453d28b7882fe4ac7b3afcbd44c96854ede011.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   
@@ -143,6 +143,7 @@ thematic_on(
   coord_flip() +
   labs(title = &quot;A barplot with mtcars&quot;,
        caption = &quot;Source : mtcars data&quot;)</code></pre>
+<pre><code>## Error : The fig.showtext code chunk option must be TRUE</code></pre>
 <p><img src="/post/2020-05-07-fast-rmd-theming-with-thematic-and-bootstraplib_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>You can add a theme to your graph but will need some further coding. But you need to know that the last element overlap your styling. Because complete themes have fonts and/or colors, they may replace your styling. If you want to keep your theme, you have to set it before to call <code>thematic_on()</code> through a <code>theme_set(theme_minimal())</code> as an example (see <a href="https://github.com/rstudio/thematic/issues/16" class="uri">https://github.com/rstudio/thematic/issues/16</a>).</p>
 <pre class="r"><code>ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color =  Species)) +
@@ -153,6 +154,7 @@ thematic_on(
   theme_minimal(base_family = thematic_get_option(&quot;font&quot;)$families,
                 base_size = thematic_get_option(&quot;font&quot;)$scale * 11,
                 base_line_size = 1.1)</code></pre>
+<pre><code>## Error : The fig.showtext code chunk option must be TRUE</code></pre>
 <p><img src="/post/2020-05-07-fast-rmd-theming-with-thematic-and-bootstraplib_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>For the moment, <code>thematic</code> doesn’t work with interactive graph packages like <code>plotly</code> or <code>ggiraph</code>. But maybe in the future (see <a href="https://talks.cpsievert.me/20200429/#24" class="uri">https://talks.cpsievert.me/20200429/#24</a>) ?</p>
 </div>
