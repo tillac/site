@@ -75,7 +75,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [[params.social]]
   name = "Linkedin"
   icon = "linkedin"
-  url = "https://fr.linkedin.com/in/thomas-vroylandt-9a2334190"
+  url = "https://www.linkedin.com/company/53487191/"
 
 [menu]
   [[menu.nav]]
