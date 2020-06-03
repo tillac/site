@@ -203,6 +203,9 @@ h1 {
 
 h2 {
 	color: $header-bg-color;
+	border-bottom: solid $header-bg-color 4px;
+	line-height: 0.15;
+  	text-decoration: none;
 }
 
 h3 {
