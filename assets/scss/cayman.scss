@@ -201,7 +201,10 @@ h1 {
 	border-bottom: none;
 }
 
-h2,
+h2 {
+	color: $header-bg-color;
+}
+
 h3 {
   color: $body-text-color;
   border-bottom: solid $header-bg-color 4px;
