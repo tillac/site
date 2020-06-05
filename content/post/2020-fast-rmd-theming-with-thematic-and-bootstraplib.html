@@ -60,7 +60,6 @@ thematic_on(
   coord_flip() +
   labs(title = &quot;A barplot with mtcars&quot;,
        caption = &quot;Source : mtcars data&quot;)</code></pre>
-<pre><code>## Error : The fig.showtext code chunk option must be TRUE</code></pre>
 <p><img src="/post/2020-fast-rmd-theming-with-thematic-and-bootstraplib_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>You can add a theme to your graph but will need some further coding. But you need to know that the last element overlap your styling. Because complete themes have fonts and/or colors, they may replace your styling. If you want to keep your theme, you have to set it before to call <code>thematic_on()</code> through a <code>theme_set(theme_minimal())</code> as an example (see <a href="https://github.com/rstudio/thematic/issues/16" class="uri">https://github.com/rstudio/thematic/issues/16</a>).</p>
 <pre class="r"><code>ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color =  Species)) +
@@ -71,7 +70,6 @@ thematic_on(
   theme_minimal(base_family = thematic_get_option(&quot;font&quot;)$families,
                 base_size = thematic_get_option(&quot;font&quot;)$scale * 11,
                 base_line_size = 1.1)</code></pre>
-<pre><code>## Error : The fig.showtext code chunk option must be TRUE</code></pre>
 <p><img src="/post/2020-fast-rmd-theming-with-thematic-and-bootstraplib_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><code>thematic</code> may work with interactive graph packages like <code>plotly</code> or <code>ggiraph</code> if you use some special feature (see <a href="https://github.com/rstudio/shiny/pull/2740" class="uri">https://github.com/rstudio/shiny/pull/2740</a> and <a href="https://github.com/rstudio/thematic/blob/8ed47c589dd4cb611823a958b46f3ed029685bcf/vignettes/Shiny.Rmd#L69" class="uri">https://github.com/rstudio/thematic/blob/8ed47c589dd4cb611823a958b46f3ed029685bcf/vignettes/Shiny.Rmd#L69</a>)</p>
 </div>
