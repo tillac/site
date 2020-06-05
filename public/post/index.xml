@@ -6,35 +6,35 @@
     <description>Recent content in Blog on tillac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fast Rmarkdown Theming with thematic and bootstraplib</title>
-      <link>/2020-05-07-fast-rmd-theming-with-thematic-and-bootstraplib/</link>
-      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      <link>/2020-fast-rmd-theming-with-thematic-and-bootstraplib/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020-05-07-fast-rmd-theming-with-thematic-and-bootstraplib/</guid>
+      <guid>/2020-fast-rmd-theming-with-thematic-and-bootstraplib/</guid>
       <description>Theming in Rmarkdown can be hard. You first made some custom CSS or use a provided theme but your figures didn’t change and you have to style your ggplot2 theme. And after it you change your mind (or your boss do) and you need to move this color shade to lighter one. So you change your theme, but forgot to change it in all your CSS and something is going wrong.</description>
     </item>
     
     <item>
       <title>Obtenir la Légion d&#39;honneur en 10 étapes</title>
-      <link>/2020-01-09-obtenir-la-l%C3%A9gion-d-honneur-en-10-%C3%A9tapes/</link>
+      <link>/2020-obtenir-la-legion-d-honneur-en-10-etapes/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020-01-09-obtenir-la-l%C3%A9gion-d-honneur-en-10-%C3%A9tapes/</guid>
+      <guid>/2020-obtenir-la-legion-d-honneur-en-10-etapes/</guid>
       <description>La Légion d’honneur est la plus haute décoration française, crée par Napoléon. Son attribution donne lieu à de nombreux articles dans les médias sur les nommés et les promus de la dernière vague. Elle suscite parfois le scandale ou la polémique, notamment quand les personnes décorées n’ont pas un parcours exemplaire. Cela a récemment été le cas pour Jean-François Cirelli, patron de Blackrock, promu officier en pleine réforme sur les retraites, ou auparavant de John Galliano, Patrick de Maistre, Maurice Papon ou quelques dignitaires étrangers peu recommandables (Al-Assad, Poutine).</description>
     </item>
     
     <item>
       <title>Les vendanges - quels emplois ?</title>
-      <link>/2019-12-10-les-vendanges-quels-emplois/</link>
+      <link>/2019-les-vendanges-quels-emplois/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019-12-10-les-vendanges-quels-emplois/</guid>
+      <guid>/2019-les-vendanges-quels-emplois/</guid>
       <description>Les vendanges sont une période l’année où l’emploi saisonnier bondit. De nombreuses personnes sont alors recrutées spécialement pour l’occasion, pour des durées souvent courtes.
 On va s’appliquer ici à mettre en avant quelques caractéristiques de cet emploi lié aux vendanges, à partir des DADS de l’Insee (voir encadré). Le focus est fait sur le métier des ouvriers de la viticulture ou de l’arboriculture fruitière (PCS 691D). La catégorie d’analyse n’est donc pas pure, bien qu’elle soit majoritairement composée de vendangeurs.</description>
     </item>

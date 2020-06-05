@@ -1,0 +1,13 @@
+---
+title: Fast Rmarkdown Theming with thematic and bootstraplib
+author: Thomas
+date: '2020-06-05'
+slug: fast-rmd-theming-with-thematic-and-bootstraplib
+categories: []
+tags: []
+top_image: '/img/champ_neige.jpg'
+---
+
+```{r child='../../static/post/external/fast_rmd_theming/fast_rmd_theming_blog.Rmd'}
+
+```

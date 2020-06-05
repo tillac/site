@@ -1,0 +1,13 @@
+---
+title: Obtenir la Légion d'honneur en 10 étapes
+author: Thomas
+date: '2020-01-09'
+slug: obtenir-la-légion-d-honneur-en-10-étapes
+categories: []
+tags: []
+top_image: '/img/chateau.jpg'
+---
+
+```{r child='../../static/post/external/legion_honneur/analyse_legion.Rmd'}
+
+```

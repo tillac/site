@@ -129,7 +129,11 @@ a {
     background-color: #741336;
     color: #ffffff;
     border-bottom: none; }
-  .main-content h2,
+  .main-content h2 {
+    color: #741336;
+    border-bottom: solid #741336 4px;
+    line-height: 0.15;
+    text-decoration: none; }
   .main-content h3 {
     color: #606c71;
     border-bottom: solid #741336 4px;

@@ -1,0 +1,13 @@
+---
+title: Les vendanges - quels emplois ?
+author: Thomas
+date: '2019-12-10'
+slug: les-vendanges-quels-emplois
+categories: []
+tags: []
+top_image: '/img/bouteilles.jpg'
+---
+
+```{r child='../../static/post/external/vendanges/analyse_vendanges.Rmd'}
+
+```
