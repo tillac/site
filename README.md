@@ -21,6 +21,7 @@ Les éléments globaux sont dans `content`, à la racine.
 ## Posts de blog
 
 Les posts de blogs sont dans `content/post`.
+Ne pas mettre de date postérieure à la date du jour.
 
 ### Création simple
 
