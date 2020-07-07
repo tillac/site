@@ -1,8 +1,8 @@
 ---
-title: Search your own tweets with an automatic pipeline
+title: Search your tweets with an automatic pipeline
 author: Thomas
 date: '2020-07-08'
-slug: search-your-own-tweets-with-an-automatic-pipeline
+slug: 2020-search-your-tweets-with-an-automatic-pipeline
 categories: []
 tags: []
 top_image: '/img/canal_chemin.jpg'
