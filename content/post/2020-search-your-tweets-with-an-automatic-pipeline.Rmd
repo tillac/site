@@ -39,7 +39,7 @@ My pipeline runs on Github Actions with the following steps :
 
 This graphic summarize it : 
 
-```{r, eval=FALSE}
+```{r}
 library(DiagrammeR)
 
 grViz(
