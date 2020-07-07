@@ -37,7 +37,7 @@ My pipeline runs on Github Actions with the following steps :
 + Take the data from the Sheet and build a table with `reactable` inside an `rmarkdown::html_document` with some CSS flavour ;
 + Publish on Netlify.
 
-This graphic summarize it :
+This graphic summarize it : 
 
 ```{r}
 library(DiagrammeR)
