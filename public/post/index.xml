@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>Test</title>
+      <link>/2020-07-07-test/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020-07-07-test/</guid>
+      <description> This is a test.
+library(ggplot2) ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point() </description>
+    </item>
+    
+    <item>
       <title>Fast Rmarkdown Theming with thematic and bootstraplib</title>
       <link>/2020-fast-rmd-theming-with-thematic-and-bootstraplib/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
