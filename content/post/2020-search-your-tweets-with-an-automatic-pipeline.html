@@ -8,10 +8,6 @@ tags: []
 top_image: '/img/canal_chemin.jpg'
 ---
 
-<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/viz/viz.js"></script>
-<link href="/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
 
 
 <div id="why-do-i-need-a-search-engine-for-my-tweets" class="section level2">
@@ -33,8 +29,6 @@ top_image: '/img/canal_chemin.jpg'
 <li>Publish on Netlify.</li>
 </ul>
 <p>This graphic summarize it :</p>
-<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph pipeline {\n\n  graph [overlap = true, \n          fontsize = 10, \n          fontname = Lato, \n          color = \"#000000\", \n          penwidth = 4]\n\n  # nodes\n  node [shape = circle, penwidth = 2, color = \"#d3d3d3\", style = filled]\n\n    twitter [label = \"Twitter\", fillcolor = \"#00acee\", fontcolor = \"#ffffff\"]\n    sheets [label = \"Google \nSheets\", fillcolor = \"#0f9d58\", fontcolor = \"#ffffff\"]\n    netlify [label = \"Netlify\", fillcolor = \"#25c7b7\", fontcolor = \"#ffffff\"]\n    artifact [label = \"Artifact \nGithub\", fillcolor = \"#000000\", fontcolor = \"#ffffff\"]\n\n    subgraph cluster_github {\n     node [shape = square]\n      collecting [label = \"Collect tweets\"]\n      table [label = \"Render table\"]\n   }\n\n  # edges\n  twitter -> collecting -> sheets -> table \n  table -> netlify\n  table -> artifact\n\n}\n      ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <div id="managing-the-pipeline-with-github-actions" class="section level3">
 <h3>Managing the pipeline with Github Actions</h3>
 <p>The core program of the pipeline is a <a href="https://github.com/tillac/morphea/blob/master/.github/workflows/collect_tw_table.yaml">YAML file</a> used by Github to run Actions. I will comment it here.</p>
