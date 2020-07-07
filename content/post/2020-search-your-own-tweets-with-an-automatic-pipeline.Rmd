@@ -1,0 +1,258 @@
+---
+title: Search your own tweets with an automatic pipeline
+author: Thomas
+date: '2020-07-08'
+slug: 2020-search-your-own-tweets-with-an-automatic-pipeline
+categories: []
+tags: []
+top_image: '/img/canal_chemin.jpg'
+draft: yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+## Why do I need a search engine for my tweets ?
+
+Twitter is a fantastic tool if you are involved in the R community or simply interested by R and other subjects around statistics, design or data science. A lot of nice people are tweeting their work and insights. You can have a look at Oscar Baruffa and Veerle van Son work on it : [https://www.t4rstats.com/](https://www.t4rstats.com/).
+
+I like it a lot and I mark all the good tweets I see as "favorites" because I don't have time to read them on the moment or because I want to keep track of them for later, when I will have to answer some questions or point at a good resource.
+
+But the difficulties come after, when I when to search back into the tweets I liked. I have to scroll a lot in my profile page and click to see more tweets. That's harassing. So I design a little tool that could help my search inside my own tweets : [Morphea](https://morphea.netlify.app/).
+
+The name come from Morpheus, the greek God of sleep, called "Morphée" in French. I named it so because it has to run when I sleep.
+
+I wrote it as a big `reactable` [table](https://glin.github.io/reactable/index.html) which is feed by an automatic pipeline using `rtweet` for [tweet collection](https://rtweet.info/) and [Github Actions](https://docs.github.com/en/actions).
+
+This blog post aims at presenting the internals of this application. This one fits my needs and how I use it. Feel free to fork it and adapt it to yours. The full repo is available on [Github](https://github.com/tillac/morphea).
+
+## Pipeline
+
+My pipeline runs on Github Actions with the following steps :
+
++ Collect tweets from Twitter using `rtweet` ;
++ Wrangle data and store them on a Google Sheet with `googlesheets4`. This step isn't mandatory but I want to be able to manually annotate things here. You can skip it if you want something simplier ;
++ Take the data from the Sheet and build a table with `reactable` inside an `rmarkdown::html_document` with some CSS flavour ;
++ Publish on Netlify.
+
+This graphic summarize it :
+
+```{r}
+library(DiagrammeR)
+
+grViz(
+  "
+digraph pipeline {
+
+  graph [overlap = true, 
+          fontsize = 10, 
+          fontname = Lato, 
+          color = '#000000', 
+          penwidth = 4]
+
+  # nodes
+  node [shape = circle, penwidth = 2, color = '#d3d3d3', style = filled]
+
+    twitter [label = 'Twitter', fillcolor = '#00acee', fontcolor = '#ffffff']
+    sheets [label = 'Google \nSheets', fillcolor = '#0f9d58', fontcolor = '#ffffff']
+    netlify [label = 'Netlify', fillcolor = '#25c7b7', fontcolor = '#ffffff']
+    artifact [label = 'Artifact \nGithub', fillcolor = '#000000', fontcolor = '#ffffff']
+
+    subgraph cluster_github {
+     node [shape = square]
+      collecting [label = 'Collect tweets']
+      table [label = 'Render table']
+   }
+
+  # edges
+  twitter -> collecting -> sheets -> table 
+  table -> netlify
+  table -> artifact
+
+}
+      ")
+```
+
+### Managing the pipeline with Github Actions
+
+The core program of the pipeline is a [YAML file](https://github.com/tillac/morphea/blob/master/.github/workflows/collect_tw_table.yaml) used by Github to run Actions. I will comment it here.
+
+The Actions execute itself on three conditions :
+
++ when I push to master ;
++ every Monday at 12 ;
++ every Thursday at 12.
+
+```{yaml, echo = TRUE}
+name: Collecting tweets and render table
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 12 * * 1'
+    - cron: '0 12 * * 4'
+```
+
+I run my tasks on a [Rocker container](https://hub.docker.com/r/rocker/verse) called `verse`. It contains all of the `tidyverse` and elements to run `rmarkdown`. [Rocker](https://www.rocker-project.org/) is a project of Docker container with R and other useful packages installed. I rely heavily on this when using Github Actions.
+
+```{yaml, echo = TRUE}
+jobs:
+  collect:
+    name: Collect tweets and render
+    runs-on: ubuntu-latest
+    container: rocker/verse
+```
+
+The next big step is to call of the secrets and set them as environment variables. I can after that use them with `Sys.getenv("TW_API_KEY")` as an example.
+
+```{yaml, echo = TRUE}   
+    env:
+      TW_API_KEY: ${{ secrets.TW_API_KEY }}
+      TW_SECRET_KEY: ${{ secrets.TW_SECRET_KEY }}
+      TW_ACCESS_TOKEN: ${{ secrets.TW_ACCESS_TOKEN }}
+      TW_SECRET_TOKEN: ${{ secrets.TW_SECRET_TOKEN }}
+      SHEET_PATH: ${{ secrets.SHEET_PATH }}
+      GOOGLE_MAIL: ${{ secrets.GOOGLE_MAIL }}
+      GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
+```
+
+I checkout into my repo and decrypt the Google token. I also install all my needed dependencies. Note that `remotes` is installed in `rocker/verse` so I don't need to install it. It's also the case for `tidyverse` and other packages I use.
+
+```{yaml, echo = TRUE}      
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Decrypt large secret
+        run: ./secret/decrypt_secret.sh
+        env:
+          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+      
+      - name: Install dependencies
+        run: |
+          remotes::install_cran("rtweet")
+          remotes::install_cran("googlesheets4")
+          remotes::install_cran("reactable")
+          remotes::install_github("ropenscilabs/icon")
+        shell: Rscript {0}
+```
+
+I run my collecting script. The results are stored as an artifact in case I want to have a look at them and check is everything goes fine.
+
+```{yaml, echo = TRUE}
+      - name: Run collecting script
+        run: |-
+          Rscript R/collecting_likes.R
+          
+      - name: Save result as artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: tw_table
+          path: tw_fav.csv
+```
+
+I render the page with the table. You can merge this step with the previous one if you don't want an intermediate storing in Sheets.
+
+```{yaml, echo = TRUE}         
+      - name: Render table
+        run: |-
+          rmarkdown::render("Rmd/tw_table.Rmd", output_file = "index.html", output_dir = ".")
+        shell: Rscript {0}
+```
+
+And I deploy to Netlify. We need to install `npm` just before.
+
+```{yaml, echo = TRUE}     
+      - name: Install npm
+        uses: actions/setup-node@v1
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          npm install netlify-cli -g
+          netlify deploy --prod --dir .  
+```
+
+It's not really complicated but CI could be hard due to small things like spaces, indentation, storing secrets, checkout, etc. Just try a lot (see my [commit history](https://github.com/tillac/morphea/commits/master)).
+
+### Secrets everywhere
+
+The big part in this pipeline is to manage all of the keys and tokens. That was the most difficult part because you have to deal with many API. For that, I used the secrets in Github Settings. 
+
+![](/img/posts/morphea/gha_secrets.png)
+
+I have 9 secrets here :
+
++ 4 for Twitter API ;
++ 3 for Google API (mail, path and the passphrase for the token) ;
++ 2 for Netlify API.
+
+If you don't use a Google Sheet step, you can have only 6.
+
+Note that once set, you can't access to the secret's value anymore. So if you forgot it (and need it), you can just generate a new token/key and copy-paste it here.
+
+Just configure each secret, as explain below (keep a local copy in a non-versioned file to test on your computer) and call them through environments variables (as in the YAML file above). You can use them after that in your R file. 
+
+#### Twitter
+
+All of the elements can be obtained through the `rtweet` vignette on [authentification](http://rtweet.info/articles/auth.html). Note that you will need a Developer Account here. It can take some days.
+
+#### Google
+
+Here, you will need three elements :
+
++ GOOGLE_MAIL is just your mail ;
++ SHEET_PATH is the path of you Google Sheet ;
++ a Google Token.
+
+The last one is obtained through this [procedure](https://gargle.r-lib.org/articles/get-api-credentials.html) in the `gargle` package (section "Service account token"), which underlies `googlesheets4`.
+
+I encrypt the token with a passphrase (with `gpg --symmetric --cipher-algo AES256 ./secret/morphea_token.json`) and store the encrypted version in a repo. The passphrase (LARGE_SECRET_PASSPHRASE) is store as a secret to decrypt the token and called in the pipeline. You can find more details :
+
++ in the [code](https://github.com/tillac/morphea/blob/master/secret/decrypt_secret.sh) ;
++ in the [documentation](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
+
+This is a standard procedure when storing token.
+
+#### Netlify
+
+For Netlify, you will need an account. Create a new site and put the name you want (if available).
+
+In "Site Settings" :
+
++ Stop all the builds. You don't need to track them because you will push the site from Github (and not pulled it from Netlify as usual) ;
++ You can find the API key in "General". It's called "API ID". I saved it as NETLIFY_SITE_ID ;
++ You can fin the auth token (NETLIFY_AUTH_TOKEN) in "User settings" > "Applications" > "New access token" > "Generate token".
+
+If needed, a more details [how-to](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) has been written by Emil Hvitfeldt.
+
+## The final result
+
+### A big table
+
+All of this results in a [big table](https://morphea.netlify.app/) with approximately 1.000 tweets inside (100 per page), generated through `rmarkdown` for the document and `reactable` for the table itself. I recommend this awesome package for creating interactive tables, have a look at [it](https://glin.github.io/reactable/index.html).
+
+![](/img/posts/morphea/morphea_screenshot.png)
+
+The main functionalities are :
+
++ ordering : you can order any columns by date or alphabetical order ;
++ filtering : you can filter the main column (Account, Text, Hashtags) to find tweets faster ;
++ key metrics : I added two metrics about favourites and retweets number (in log here). The value print when you hover the bar ;
++ link to main resources : you have a link to the tweet on the left (the anchor) and links to the main media (including media in quotes) and main urls in each tweet.
+
+Note that you can also use [Twitter Embedding](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/overview) to print nice formatted tweets. But it doesn't work well [here](https://github.com/glin/reactable/issues/55) and reduce the search possibilities.
+
+### And after ?
+
+I still plan to upgrade the table with two main things :
+
++ first, I want to add my Chrome and Firefox bookmarks. I also use them a lot to mark resources. It will need some deduplication with links in tweets and some manual uploading of data ;
++ second, I want to categorize some of the tweets, manually or with an algorithm. It will add some more values to the filtering allowing me to make more free search in my history (not only search for a precise tweet bu more as an exploration). This is one of the reason I use a Google Sheet in the pipeline : I want it to be possible to make manual annotation to the data.
+
+> Feel free to reach me on [Twitter](https://twitter.com/tvroylandt) or by [mail](mailto:thomas@tillac-data.com) if you want to talk about it.

@@ -6,10 +6,19 @@
     <description>Recent content in Blog on tillac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Search your own tweets with an automatic pipeline</title>
+      <link>/2020-search-your-own-tweets-with-an-automatic-pipeline/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020-search-your-own-tweets-with-an-automatic-pipeline/</guid>
+      <description>Why do I need a search engine for my tweets ? Twitter is a fantastic tool if you are involved in the R community or simply interested by R and other subjects around statistics, design or data science. A lot of nice people are tweeting their work and insights. You can have a look at Oscar Baruffa and Veerle van Son work on it : https://www.t4rstats.com/.</description>
+    </item>
     
     <item>
       <title>Fast Rmarkdown Theming with thematic and bootstraplib</title>
