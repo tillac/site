@@ -6,7 +6,6 @@ slug: 2020-search-your-own-tweets-with-an-automatic-pipeline
 categories: []
 tags: []
 top_image: '/img/canal_chemin.jpg'
-draft: yes
 ---
 
 ```{r setup, include = FALSE}
