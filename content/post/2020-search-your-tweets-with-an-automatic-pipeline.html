@@ -18,7 +18,7 @@ top_image: '/img/canal_chemin.jpg'
 <h2>Why do I need a search engine for my tweets ?</h2>
 <p>Twitter is a fantastic tool if you are involved in the R community or simply interested by R and other subjects around statistics, design or data science. A lot of nice people are tweeting their work and insights. You can have a look at Oscar Baruffa and Veerle van Son work on it : <a href="https://www.t4rstats.com/">https://www.t4rstats.com/</a>.</p>
 <p>I like it a lot and I mark all the good tweets I see as “favorites” because I don’t have time to read them on the moment or because I want to keep track of them for later, when I will have to answer some questions or point at a good resource.</p>
-<p>But the difficulties come after, when I when to search back into the tweets I liked. I have to scroll a lot in my profile page and click to see more tweets. That’s harassing. So I design a little tool that could help my search inside my own tweets : <a href="https://morphea.netlify.app/">Morphea</a>.</p>
+<p>But the difficulties come after, when I when to search back into the tweets I liked. I have to scroll a lot in my profile page and click to see more tweets. That’s harassing. So I design a little tool that could help my search inside my own tweets : <a href="https://morphea.netlify.app/">Morphea</a> - <a href="https://github.com/tillac/morphea">Github</a>.</p>
 <p>The name come from Morpheus, the greek God of sleep, called “Morphée” in French. I named it so because it has to run when I sleep.</p>
 <p>I wrote it as a big <code>reactable</code> <a href="https://glin.github.io/reactable/index.html">table</a> which is feed by an automatic pipeline using <code>rtweet</code> for <a href="https://rtweet.info/">tweet collection</a> and <a href="https://docs.github.com/en/actions">Github Actions</a>.</p>
 <p>This blog post aims at presenting the internals of this application. This one fits my needs and how I use it. Feel free to fork it and adapt it to yours. The full repo is available on <a href="https://github.com/tillac/morphea">Github</a>.</p>
@@ -113,7 +113,7 @@ on:
 </div>
 <div id="secrets-everywhere" class="section level3">
 <h3>Secrets everywhere</h3>
-<p>The big part in this pipeline is to manage all of the keys and tokens. That was the most difficult part because you have to deal with many API. For that, I used the secrets in Github Settings.</p>
+<p>The big part in this pipeline is to manage all the keys and tokens. That was the most difficult part because you have to deal with many API. For that, I used the secrets in Github Settings.</p>
 <p><img src="/img/posts/morphea/gha_secrets.png" /></p>
 <p>I have 9 secrets here :</p>
 <ul>
@@ -153,7 +153,7 @@ on:
 <li>You can find the API key in “General”. It’s called “API ID”. I saved it as NETLIFY_SITE_ID ;</li>
 <li>You can fin the auth token (NETLIFY_AUTH_TOKEN) in “User settings” &gt; “Applications” &gt; “New access token” &gt; “Generate token”.</li>
 </ul>
-<p>If needed, a more details <a href="https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/">how-to</a> has been written by Emil Hvitfeldt.</p>
+<p>If needed, a more detailed <a href="https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/">how-to</a> has been written by Emil Hvitfeldt.</p>
 </div>
 </div>
 </div>
@@ -183,7 +183,7 @@ on:
 </div>
 <div id="acknowledgements" class="section level2">
 <h2>Acknowledgements</h2>
-<p>I would like to thank <a href="https://github.com/glin">Greg Lin</a> for his work on <code>reactable</code> and his answer on my issue. And also all the people on <a href="r-grrr.slack.com">grrr</a>, a Frech help channel on R, who are very helpful.</p>
+<p>I would like to thank <a href="https://github.com/glin">Greg Lin</a> for his work on <code>reactable</code> and his answer on my issue. And also all the people on <a href="r-grrr.slack.com">grrr</a>, a French help channel on R, who are very helpful.</p>
 <blockquote>
 <p>Feel free to reach me on <a href="https://twitter.com/tvroylandt">Twitter</a> or by <a href="mailto:thomas@tillac-data.com">mail</a> if you want to talk about it.</p>
 </blockquote>

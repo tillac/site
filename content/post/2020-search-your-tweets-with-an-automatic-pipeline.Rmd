@@ -20,7 +20,7 @@ Twitter is a fantastic tool if you are involved in the R community or simply int
 
 I like it a lot and I mark all the good tweets I see as "favorites" because I don't have time to read them on the moment or because I want to keep track of them for later, when I will have to answer some questions or point at a good resource.
 
-But the difficulties come after, when I when to search back into the tweets I liked. I have to scroll a lot in my profile page and click to see more tweets. That's harassing. So I design a little tool that could help my search inside my own tweets : [Morphea](https://morphea.netlify.app/).
+But the difficulties come after, when I when to search back into the tweets I liked. I have to scroll a lot in my profile page and click to see more tweets. That's harassing. So I design a little tool that could help my search inside my own tweets : [Morphea](https://morphea.netlify.app/) - [Github](https://github.com/tillac/morphea).
 
 The name come from Morpheus, the greek God of sleep, called "Morphée" in French. I named it so because it has to run when I sleep.
 
