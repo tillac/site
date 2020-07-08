@@ -181,7 +181,7 @@ It's not really complicated but CI could be hard due to small things like spaces
 
 ### Secrets everywhere
 
-The big part in this pipeline is to manage all of the keys and tokens. That was the most difficult part because you have to deal with many API. For that, I used the secrets in Github Settings. 
+The big part in this pipeline is to manage all the keys and tokens. That was the most difficult part because you have to deal with many API. For that, I used the secrets in Github Settings. 
 
 ![](/img/posts/morphea/gha_secrets.png)
 
@@ -228,7 +228,7 @@ In "Site Settings" :
 + You can find the API key in "General". It's called "API ID". I saved it as NETLIFY_SITE_ID ;
 + You can fin the auth token (NETLIFY_AUTH_TOKEN) in "User settings" > "Applications" > "New access token" > "Generate token".
 
-If needed, a more details [how-to](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) has been written by Emil Hvitfeldt.
+If needed, a more detailed [how-to](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) has been written by Emil Hvitfeldt.
 
 ## The final result
 
@@ -255,6 +255,6 @@ I still plan to upgrade the table with two main things :
 
 ## Acknowledgements
 
-I would like to thank [Greg Lin](https://github.com/glin) for his work on `reactable` and his answer on my issue. And also all the people on [grrr](r-grrr.slack.com), a Frech help channel on R, who are very helpful.
+I would like to thank [Greg Lin](https://github.com/glin) for his work on `reactable` and his answer on my issue. And also all the people on [grrr](r-grrr.slack.com), a French help channel on R, who are very helpful.
 
 > Feel free to reach me on [Twitter](https://twitter.com/tvroylandt) or by [mail](mailto:thomas@tillac-data.com) if you want to talk about it.
