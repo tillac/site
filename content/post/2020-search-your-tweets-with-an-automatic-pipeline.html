@@ -1,7 +1,7 @@
 ---
 title: Search your tweets with an automatic pipeline
 author: Thomas
-date: '2020-07-07'
+date: '2020-07-08'
 slug: 2020-search-your-tweets-with-an-automatic-pipeline
 categories: []
 tags: []
@@ -161,16 +161,16 @@ on:
 <h2>The final result</h2>
 <div id="a-big-table" class="section level3">
 <h3>A big table</h3>
-<p>All of this results in a <a href="https://morphea.netlify.app/">big table</a> with approximately 1.000 tweets inside (100 per page), generated through <code>rmarkdown</code> for the document and <code>reactable</code> for the table itself. I recommend this awesome package for creating interactive tables, have a look at <a href="https://glin.github.io/reactable/index.html">it</a>.</p>
+<p>All of this results in a <a href="https://morphea.netlify.app/">big table</a> with approximately 1.000 tweets inside (50 per page), generated through <code>rmarkdown</code> for the document and <code>reactable</code> for the table itself. I recommend this awesome package for creating interactive tables, have a look at <a href="https://glin.github.io/reactable/index.html">it</a>.</p>
 <p><img src="/img/posts/morphea/morphea_screenshot.png" /></p>
 <p>The main functionalities are :</p>
 <ul>
+<li>embedding : thanks to Greg Lin, I have added a <a href="https://github.com/glin/reactable/issues/55">Tweet Embedding</a>. I moslty remind of things visually so it’s very useful to me. This create some slow in searching but I prefer it to non having this visual formatting ;</li>
 <li>ordering : you can order any columns by date or alphabetical order ;</li>
 <li>filtering : you can filter the main column (Account, Text, Hashtags) to find tweets faster ;</li>
 <li>key metrics : I added two metrics about favourites and retweets number (in log here). The value print when you hover the bar ;</li>
-<li>link to main resources : you have a link to the tweet on the left (the anchor) and links to the main media (including media in quotes) and main urls in each tweet.</li>
+<li>link to main resources : you have a link to the tweet on the left (the anchor) and main urls in each tweet.</li>
 </ul>
-<p>Note that you can also use <a href="https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/overview">Twitter Embedding</a> to print nice formatted tweets. But it doesn’t work well <a href="https://github.com/glin/reactable/issues/55">here</a> and reduce the search possibilities.</p>
 </div>
 <div id="and-after" class="section level3">
 <h3>And after ?</h3>
@@ -179,8 +179,12 @@ on:
 <li>first, I want to add my Chrome and Firefox bookmarks. I also use them a lot to mark resources. It will need some deduplication with links in tweets and some manual uploading of data ;</li>
 <li>second, I want to categorize some of the tweets, manually or with an algorithm. It will add some more values to the filtering allowing me to make more free search in my history (not only search for a precise tweet bu more as an exploration). This is one of the reason I use a Google Sheet in the pipeline : I want it to be possible to make manual annotation to the data.</li>
 </ul>
+</div>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>I would like to thank <a href="https://github.com/glin">Greg Lin</a> for his work on <code>reactable</code> and his answer on my issue. And also all the people on <a href="r-grrr.slack.com">grrr</a>, a Frech help channel on R, who are very helpful.</p>
 <blockquote>
 <p>Feel free to reach me on <a href="https://twitter.com/tvroylandt">Twitter</a> or by <a href="mailto:thomas@tillac-data.com">mail</a> if you want to talk about it.</p>
 </blockquote>
-</div>
 </div>

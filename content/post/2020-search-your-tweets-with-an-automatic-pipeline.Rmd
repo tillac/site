@@ -1,7 +1,7 @@
 ---
 title: Search your tweets with an automatic pipeline
 author: Thomas
-date: '2020-07-07'
+date: '2020-07-08'
 slug: 2020-search-your-tweets-with-an-automatic-pipeline
 categories: []
 tags: []
@@ -234,18 +234,17 @@ If needed, a more details [how-to](https://www.hvitfeldt.me/blog/bookdown-netlif
 
 ### A big table
 
-All of this results in a [big table](https://morphea.netlify.app/) with approximately 1.000 tweets inside (100 per page), generated through `rmarkdown` for the document and `reactable` for the table itself. I recommend this awesome package for creating interactive tables, have a look at [it](https://glin.github.io/reactable/index.html).
+All of this results in a [big table](https://morphea.netlify.app/) with approximately 1.000 tweets inside (50 per page), generated through `rmarkdown` for the document and `reactable` for the table itself. I recommend this awesome package for creating interactive tables, have a look at [it](https://glin.github.io/reactable/index.html).
 
 ![](/img/posts/morphea/morphea_screenshot.png)
 
 The main functionalities are :
 
++ embedding : thanks to Greg Lin, I have added a [Tweet Embedding](https://github.com/glin/reactable/issues/55). I moslty remind of things visually so it's very useful to me. This create some slow in searching but I prefer it to non having this visual formatting ;
 + ordering : you can order any columns by date or alphabetical order ;
 + filtering : you can filter the main column (Account, Text, Hashtags) to find tweets faster ;
 + key metrics : I added two metrics about favourites and retweets number (in log here). The value print when you hover the bar ;
-+ link to main resources : you have a link to the tweet on the left (the anchor) and links to the main media (including media in quotes) and main urls in each tweet.
-
-Note that you can also use [Twitter Embedding](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/overview) to print nice formatted tweets. But it doesn't work well [here](https://github.com/glin/reactable/issues/55) and reduce the search possibilities.
++ link to main resources : you have a link to the tweet on the left (the anchor) and main urls in each tweet.
 
 ### And after ?
 
@@ -253,5 +252,9 @@ I still plan to upgrade the table with two main things :
 
 + first, I want to add my Chrome and Firefox bookmarks. I also use them a lot to mark resources. It will need some deduplication with links in tweets and some manual uploading of data ;
 + second, I want to categorize some of the tweets, manually or with an algorithm. It will add some more values to the filtering allowing me to make more free search in my history (not only search for a precise tweet bu more as an exploration). This is one of the reason I use a Google Sheet in the pipeline : I want it to be possible to make manual annotation to the data.
+
+## Acknowledgements
+
+I would like to thank [Greg Lin](https://github.com/glin) for his work on `reactable` and his answer on my issue. And also all the people on [grrr](r-grrr.slack.com), a Frech help channel on R, who are very helpful.
 
 > Feel free to reach me on [Twitter](https://twitter.com/tvroylandt) or by [mail](mailto:thomas@tillac-data.com) if you want to talk about it.
