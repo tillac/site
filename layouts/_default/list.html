@@ -3,13 +3,24 @@
 <ul>
 {{ $pages := .Pages }}
 {{ range $pages.ByPublishDate.Reverse }}
-  <li>
-    {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
-    {{ .PublishDate.Format $dateFormat }}
-    <a href="{{ .Permalink }}">
-      {{ .Title }}
-    </a>
-  </li>        
+  	<div style = "display: flex; align-items: flex-start; margin-bottom: 2rem;">
+
+  		<div class = "wrap-post-item">
+	    	<img src='{{ .Params.top_image }}' width="150px"> 
+		</div>
+
+	    <div style = "flex:1;">
+	   		 <h3><a href="{{ .Permalink }}">{{ .Title }} </a></h3>
+		     <div>
+		          {{ .Summary | plainify | emojify | truncate 300 }}
+		     </div>
+			 <nav class = "date-post-item">
+		     	 {{ $dateFormat := $.Site.Params.dateFormat}}
+		    	 {{ .PublishDate.Format $dateFormat }}
+		     </nav>
+	    </div>
+
+	</div>  
 {{ end }}
 </ul>
 {{ end }}

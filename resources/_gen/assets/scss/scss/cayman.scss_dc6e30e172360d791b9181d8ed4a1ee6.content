@@ -282,3 +282,15 @@ ul.flat a {
 
 .nav-social {
   display: inline-block; }
+
+/* list for blog posts */
+/* blog post date */
+nav.date-post-item {
+  font-size: 11pt;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #819198; }
+
+.wrap-post-item {
+  margin-right: 1rem !important;
+  padding: 10px; }
