@@ -294,3 +294,22 @@ nav.date-post-item {
 .wrap-post-item {
   margin-right: 1rem !important;
   padding: 10px; }
+
+/* blocs avec images */
+.bloc-left {
+  padding: 0.2em;
+  margin: 0.2em 0;
+  padding-left: 110px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px; }
+
+.bloc-right {
+  padding: 0.2em;
+  margin: 0.2em 0;
+  padding-right: 110px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: 750px center;
+  min-height: 120px; }

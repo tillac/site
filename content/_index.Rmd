@@ -1,0 +1,85 @@
+---
+title: tillac
+top_image: '/img/statue.jpg'
+---
+
+#### [EN]
+
+We are a data consulting compagny operating in France and worldwide about :
+
++ data analysis ;
++ data strategy ;
++ graphical analytics.
+
+We use R for all our work. Check the [what we do](/what) page to know more about our offer.
+
+#### [FR]
+
+Nous sommes un cabinet de conseil spécialisé en :
+
++ analyse de données ;
++ stratégie autour des données ;
++ création de graphiques.
+
+Nous utilisons R pour tout notre travail. Visitez la page [what we do](/what) pour en savoir plus sur notre offre.
+
+### Products and solutions
+
+<div class="bloc-left" style = "background-image:url('/img/icons/bar-chart.svg');">
+
+#### Analytics and dashboards
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+</div>
+
+<div class="bloc-right" style = "background-image:url('/img/icons/options.svg');">
+
+#### Designed and parametrized reports
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</div>
+
+<div class="bloc-left" style = "background-image:url('/img/icons/construct.svg');">
+
+#### Data science process automation
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</div>
+
+<div class="bloc-right" style = "background-image:url('/img/icons/git-pull-request.svg');">
+
+#### Data strategy
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+</div>
+
+### References
+
+<div class="bloc-left" style = "background-image:url('/img/clients/rfortherestofus.png');">
+
+#### R for the Rest of Us
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+</div>
+
+<div class="bloc-left" style = "background-image:url('/img/clients/omni.svg');">
+
+#### OMNI Institute
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</div>
+
+<div class="bloc-left" style = "background-image:url('/img/clients/sgdf.png');">
+
+#### Scouts et Guides de France
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+</div>
+
