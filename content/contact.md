@@ -5,8 +5,8 @@ top_image: '/img/girafes.jpg'
 
 #### [EN]
 
-Anything we can do for you ? Contact us so we can discuss about it : <a href='mailto:contact@tillac-data.com'>contact@tillac-data.com</a>
+Something to do with your data ? Connect with us on [Twitter](https://twitter.com/tillac_data) or by mail (<a href='mailto:contact@tillac-data.com'>contact@tillac-data.com</a>). We will propose you personalized solutions.
 
 #### [FR]
 
-Pouvons-nous faire quelque chose pour vous ? Contactez nous pour en parler : <a href='mailto:contact@tillac-data.com'>contact@tillac-data.com</a>
+Des besoins concernant vos données ? Contactez nous par [Twitter](https://twitter.com/tillac_data) ou par mail (<a href='mailto:contact@tillac-data.com'>contact@tillac-data.com</a>). Nous vous proposerons des solutions personnalisées.

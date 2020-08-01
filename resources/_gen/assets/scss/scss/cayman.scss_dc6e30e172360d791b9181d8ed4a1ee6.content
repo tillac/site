@@ -26,6 +26,15 @@ a {
     border-bottom: none;
     line-height: 1; }
 
+/* links when img */
+a.links-img {
+  color: #606c71;
+  border-bottom: none;
+  text-decoration: none; }
+  a.links-img:hover {
+    background-color: #ffffff !important;
+    border-bottom: none !important; }
+
 /* navbar position */
 .page-nav {
   text-align: center; }
@@ -313,3 +322,8 @@ nav.date-post-item {
   background-repeat: no-repeat;
   background-position: 750px center;
   min-height: 120px; }
+
+/* card biographie */
+.card-bio {
+  padding: 20px;
+  width: 50%; }

@@ -57,17 +57,29 @@ body {
 }
 
 /* links */
-a {
+a{
   color: $body-text-color;
   border-bottom: solid $header-bg-color 4px;
   line-height: 0.2;
   text-decoration: none;
 
   &:hover {
-    background-color: $header-bg-color;
+  background-color: $header-bg-color;
 	color : #ffffff;
 	border-bottom: none;
 	line-height: 1;
+  }
+}
+
+/* links when img */
+a.links-img {
+  color: $body-text-color;
+  border-bottom: none;
+  text-decoration: none;
+
+  &:hover {
+  background-color: #ffffff !important;
+  border-bottom: none !important;
   }
 }
 
@@ -456,4 +468,10 @@ nav.date-post-item{
     background-repeat: no-repeat;
     background-position: 750px center;
     min-height: 120px;
+}
+
+/* card biographie */
+.card-bio {
+  padding: 20px;
+  width: 50%;
 }

@@ -54,9 +54,8 @@ On va s’appliquer ici à mettre en avant quelques caractéristiques de cet emp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>[EN] Thomas is a data analyst. After a master degree in Statistics and Social Sciences and some works in reasearch and public statistics, about social workers, employment and skills, he founded tillac in 2020.
-He likes datas, how to use them and enhance them. He also loves good design, because it also helps to understand things, running and badminton. Have a look at his website.
-[FR] Thomas est statisticien. Il a été formé aux statistiques ainsi qu&amp;rsquo;aux sciences sociales (ENS-EHESS).</description>
+      <description>Thomas Thomas is a data analyst with a social sciences background. After some jobs as a statistician in the public administration, he founded tillac. His role is to bring the clients well-designed and world class solutions to their problems with data. He uses R as a day-to-day tool.
+ Msc. Sociology &amp;amp; Statistics (ENS-EHESS-ENSAE) BA Sociology (University of Bourgogne) BA History (University of Bourgogne)</description>
     </item>
     
     <item>
@@ -65,18 +64,8 @@ He likes datas, how to use them and enhance them. He also loves good design, bec
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
-      <description>[EN] Anything we can do for you ? Contact us so we can discuss about it : contact@tillac-data.com[FR] Pouvons-nous faire quelque chose pour vous ? Contactez nous pour en parler : contact@tillac-data.</description>
-    </item>
-    
-    <item>
-      <title>What we do</title>
-      <link>/what/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/what/</guid>
-      <description>[EN] At tillac, we believe that data must be seen in its context :
- what type of organization are you ? do you need analytics to have weekly insights about your activity ? or in-deep knolewdge of how your processes really works ? you want to use data to communicate to stackholders ?  We help you with all this steps.
-Data strategy You feel that your use of your datas is not optimal ?</description>
+      <description>[EN] Something to do with your data ? Connect with us on Twitter or by mail (contact@tillac-data.com). We will propose you personalized solutions.
+[FR] Des besoins concernant vos données ? Contactez nous par Twitter ou par mail (contact@tillac-data.com). Nous vous proposerons des solutions personnalisées.</description>
     </item>
     
   </channel>
