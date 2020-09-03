@@ -7,3 +7,6 @@
 [submodule "static/post/external/vendanges"]
 	path = static/post/external/vendanges
 	url = https://github.com/tillac/vendanges
+[submodule "static/post/external/cran_stats"]
+	path = static/post/external/cran_stats
+	url = git@github.com:tillac/cran_stats.git
