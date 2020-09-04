@@ -6,20 +6,10 @@
     <description>Recent content on tillac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Beyond R Packages - An History of Collaborations</title>
-      <link>/2020-cran-packages/</link>
-      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020-cran-packages/</guid>
-      <description>For all R users, CRAN is the place were you can find most of the packages you need to run code. Last month, I saw this Xkcd drawing :
-And this remind me of something : behind packages, you can find people. And this people are at the heart of all your analytics pipelines because they build, maintain and develop R packages. It’s their ideas and their work, discussion and collaborations that made R as it is.</description>
-    </item>
     
     <item>
       <title>Search your tweets with an automatic pipeline</title>
