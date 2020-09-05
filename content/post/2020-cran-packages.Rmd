@@ -1,7 +1,7 @@
 ---
 title: Beyond R Packages - An History of Collaborations
 author: Thomas
-date: '2020-09-03'
+date: '2020-09-05'
 slug: 2020-cran-packages
 categories: []
 tags: []
