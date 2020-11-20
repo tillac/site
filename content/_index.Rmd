@@ -102,8 +102,7 @@ The [Louvre](https://www.louvre.fr/) has more than 10 millions visitors a year. 
 
 </div>
 
-<div style = "margin:auto;width: 30%;">
-<!-- <div style = "margin:auto;width: 70%;"> -->
+<div style = "margin:auto;width: 70%;">
 
 <img src = '/img/clients/prosper_portland.png' height = '90px' hspace = 10>
 <img src = '/img/clients/reading_partners.jpg' height = '100px' hspace = 10>
