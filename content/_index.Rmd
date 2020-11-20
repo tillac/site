@@ -70,13 +70,13 @@ We use the latest and the best tools to solve your data problems. They helps us 
 
 ### References
 
-<!-- <div class="bloc-left" style = "background-image:url('/img/clients/musee_louvre.png');"> -->
+<div class="bloc-left" style = "background-image:url('/img/clients/musee_louvre.png');">
 
-<!-- #### Louvre Museum -->
+#### Louvre Museum
 
-<!-- The [Louvre](https://www.louvre.fr/) has more than 10 millions visitors a year. Most of them use technical services like Wi-Fi, audioguides or the internet website. All of this services could gather datas to improve the knowledge about the visitors and their experience. We help the Louvre to map their datas (quality, actors involved, legal aspects, ...) and build a strategy to use it from a data analysis perspective. -->
+The [Louvre](https://www.louvre.fr/) has more than 10 millions visitors a year. Most of them use technical services like Wi-Fi, audioguides or the internet website. All of this services could gather datas to improve the knowledge about the visitors and their experience. We help the Louvre to map their datas (quality, actors involved, legal aspects, ...) and build a strategy to use it from a data analysis perspective.
 
-<!-- </div> -->
+</div>
 
 <div class="bloc-left" style = "background-image:url('/img/clients/rfortherestofus.png');">
 
@@ -107,7 +107,7 @@ We use the latest and the best tools to solve your data problems. They helps us 
 
 <img src = '/img/clients/prosper_portland.png' height = '90px' hspace = 10>
 <img src = '/img/clients/reading_partners.jpg' height = '100px' hspace = 10>
-<!-- <img src = '/img/clients/ctdata.png' height = '70px' hspace = 10> -->
+<img src = '/img/clients/ctdata.png' height = '70px' hspace = 10>
 
 </div>
 
